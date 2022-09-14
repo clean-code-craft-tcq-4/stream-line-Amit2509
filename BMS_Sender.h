@@ -5,11 +5,13 @@
 #define SOC_MIN         20
 #define SOC_MAX         80
 
+#define E_OK   0
+
 typedef struct{
   int Temp[BMS_SENDER_BUFFER_SIZE];
   int SoC[BMS_SENDER_BUFFER_SIZE];
 }BMS_ParamT;
 
 extern BMS_ParamT BMS_Param;
-void BMS_Sender_GenerateData();
-void BMS_Sender_SendData();
+int BMS_Sender_GenerateData();
+int BMS_Sender_SendData();
