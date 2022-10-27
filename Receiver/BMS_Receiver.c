@@ -6,7 +6,7 @@ void ReadParameters(float* temperature, float* SOC)
   char dummy;
   scanf("%f%c%f", temperature, &dummy, SOC);
   
-  printf("Temp:%f,SOC:%f",temperature,SOC);
+  printf("Temp:%f,SOC:%f\n",temperature,SOC);
 }
 
 void ReadFromConsoleInput(float* temperature, float* SOC)
