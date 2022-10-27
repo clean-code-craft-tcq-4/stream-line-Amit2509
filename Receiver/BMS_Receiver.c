@@ -9,5 +9,5 @@ void ReadParameters(float* temperature, float* SOC)
 
 void ReadFromConsoleInput(float* temperature, float* SOC)
 {
-  ReadParameters(temperature, SOC, ChargeRate);
+  ReadParameters(temperature, SOC);
 }
