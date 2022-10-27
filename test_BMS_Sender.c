@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include "BMS_Sender.h"
+#include "BMS_Receiver.h"
 
 int main()
 {
