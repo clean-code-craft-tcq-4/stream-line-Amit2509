@@ -21,10 +21,10 @@ void ReadParameters(float* SOC,float* temperature)
 {
   ReadConsole(temperature, SOC);
   
-   for(int i = 0; i<NUMBER_OF_SAMPLES_FOR_SMA-1; i++)
+   for(int prmsloop = 0; prmsloop<NUMBER_OF_SAMPLES_FOR_SMA-1; prmsloop++)
   {
-    Temp_Array[i] = Temp_Array[i+1];
-    SOC_Array[i] = SOC_Array[i+1];
+    Temp_Array[i] = Temp_Array[prmsloop+1];
+    SOC_Array[i] = SOC_Array[prmsloop+1];
   }
   
   /*Inserting the latest data into the last element of array*/
