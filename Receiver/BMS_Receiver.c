@@ -7,8 +7,6 @@ int ReadParameters(float* temperature, float* SOC)
 {
   char dummy;
   return scanf("%f%c%f", temperature, &dummy, SOC);
-  
-  printf("Temp:%f,SOC:%f\n",temperature,SOC);
 }
 
 void ReadFromConsoleInput(float* temperature, float* SOC)
@@ -50,23 +48,20 @@ void FindSMA ()
 {
   float Temp_Sum = 0;
   float SOC_Sum = 0;
-//  float ChargeRate_Sum = 0;
     for (int i = 0; i < NUMBER_OF_SAMPLES_FOR_SMA; i++)
     {
       Temp_Sum +=Temp_Array[i];
       SOC_Sum +=SOC_Array[i];
-  //    ChargeRate_Sum +=ChargeRate_Array[i];
     }
   SMA_Temp = Temp_Sum/NUMBER_OF_SAMPLES_FOR_SMA;
   SMA_SOC = SOC_Sum/NUMBER_OF_SAMPLES_FOR_SMA;
-  //SMA_ChargeRate = ChargeRate_Sum/NUMBER_OF_SAMPLES_FOR_SMA;
+ 
 }
 
 int PrintMinMaxSMA()
 {
     printf("Temperature: Min = %f, Max = %f, SMA = %f\n", Min_Temp, Max_Temp, SMA_Temp);
     printf("SOC: Min = %f, Max = %f, SMA = %f\n", Min_SOC, Max_SOC, SMA_SOC);
-    //printf("ChargeRate: Min = %f, Max = %f, SMA = %f\n\n", Min_ChargeRate, Max_ChargeRate, SMA_ChargeRate);
   
   return 1;
 }
@@ -76,13 +71,12 @@ void ReadConsolePrintMinMaxSMA()
   float temperature, SOC, ChargeRate;
   char title[50];
   fgets(title,50,stdin);
-  puts(title);
+
   for (int i=0; i<50; i++)
   {
     ReadFromConsoleInput(&temperature, &SOC);
     FindMinAndMax(temperature, &Min_Temp, &Max_Temp);
     FindMinAndMax(SOC, &Min_SOC, &Max_SOC);
-//    FindMinAndMax(ChargeRate, &Min_ChargeRate, &Max_ChargeRate);
     FindSMA();
     PrintMinMaxSMA();
   }
