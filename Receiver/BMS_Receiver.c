@@ -15,7 +15,7 @@ float ChargeRate_Array[NUMBER_OF_SAMPLES_FOR_SMA] = {0};
 
 
 
-void ReadParameters(float* temperature, float* SOC)
+int ReadParameters(float* temperature, float* SOC)
 {
   char dummy;
   return scanf("%f%c%f", temperature, &dummy, SOC);
