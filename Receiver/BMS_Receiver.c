@@ -14,7 +14,8 @@ float SOC_Array[NUMBER_OF_SAMPLES_FOR_SMA] = {0};
 int ReadConsole(float* temperature, float* SOC)
 {
   char ReadDummy_Ch;
-  return scanf("%f%c%f", temperature, &ReadDummy_Ch, SOC);
+  return 255;
+ // return scanf("%f%c%f", temperature, &ReadDummy_Ch, SOC);
 }
 
 void ReadParameters(float* SOC,float* temperature)
