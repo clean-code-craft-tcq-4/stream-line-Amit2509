@@ -7,10 +7,7 @@ extern float Min_SOC;
 extern float Max_SOC;
 extern float SMA_SOC;
 extern float SOC_Array[NUMBER_OF_SAMPLES_FOR_SMA];
-extern float Min_ChargeRate;
-extern float Max_ChargeRate;
-extern float SMA_ChargeRate;
-extern float ChargeRate_Array[NUMBER_OF_SAMPLES_FOR_SMA];
+
 
 
 int ReadConsole(float* temperature, float* SOC);
