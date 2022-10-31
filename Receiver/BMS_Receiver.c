@@ -23,8 +23,8 @@ void ReadParameters(float* SOC,float* temperature)
   
    for(int prmsloop = 0; prmsloop<NUMBER_OF_SAMPLES_FOR_SMA-1; prmsloop++)
   {
-    Temp_Array[i] = Temp_Array[prmsloop+1];
-    SOC_Array[i] = SOC_Array[prmsloop+1];
+    Temp_Array[prmsloop] = Temp_Array[prmsloop+1];
+    SOC_Array[prmsloop] = SOC_Array[prmsloop+1];
   }
   
   /*Inserting the latest data into the last element of array*/
