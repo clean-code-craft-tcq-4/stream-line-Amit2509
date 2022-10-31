@@ -1,17 +1,5 @@
 #include <stdio.h>
 #include "BMS_Receiver.h"
-float Min_Temp = 0;
-float Max_Temp = 0;
-float SMA_Temp = 0;
-float Temp_Array[NUMBER_OF_SAMPLES_FOR_SMA] = {0};
-float Min_SOC = 0;
-float Max_SOC = 0;
-float SMA_SOC = 0;
-float SOC_Array[NUMBER_OF_SAMPLES_FOR_SMA] = {0};
-float Min_ChargeRate = 0;
-float Max_ChargeRate = 0;
-float SMA_ChargeRate = 0;
-float ChargeRate_Array[NUMBER_OF_SAMPLES_FOR_SMA] = {0};
 
 
 
