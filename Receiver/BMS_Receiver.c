@@ -37,6 +37,9 @@ void ReadParameters(float* SOC,float* temperature)
 
 void FindMinAndMax(float data, float* Min, float* Max)
 {
+  printf("data=%f\n",data);
+  printf("Min=%f\n",*Min);
+  printf("Max=%f\n",*Max);
    if (data < *Min)
    {
      *Min = data;
