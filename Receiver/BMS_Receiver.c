@@ -55,11 +55,13 @@ void FindSMA ()
 {
   float Temp_Sum = 0;
   float SOC_Sum = 0;
-    for (int i = 0; i < NUMBER_OF_SAMPLES_FOR_SMA; i++)
+  
+    for (int SMALoop = 0; SMALoop < NUMBER_OF_SAMPLES_FOR_SMA; SMALoop++)
     {
       Temp_Sum +=Temp_Array[i];
       SOC_Sum +=SOC_Array[i];
     }
+  
   SMA_Temp = Temp_Sum/NUMBER_OF_SAMPLES_FOR_SMA;
   SMA_SOC = SOC_Sum/NUMBER_OF_SAMPLES_FOR_SMA;
  
