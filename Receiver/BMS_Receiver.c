@@ -30,11 +30,8 @@ void ReadParameters(float* SOC,float* temperature)
   
   /*Inserting the latest data into the last element of array*/
   Temp_Array[NUMBER_OF_SAMPLES_FOR_SMA-1] = *temperature;
-  printf("temperature=%f\n",Temp_Array[NUMBER_OF_SAMPLES_FOR_SMA-1]);
   SOC_Array[NUMBER_OF_SAMPLES_FOR_SMA-1] = *SOC;
-  printf("SOC=%f\n",SOC_Array[NUMBER_OF_SAMPLES_FOR_SMA-1]);
-  
-    
+ 
   return;
 }
 
