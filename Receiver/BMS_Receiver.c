@@ -30,7 +30,9 @@ void ReadParameters(float* SOC,float* temperature)
   
   /*Inserting the latest data into the last element of array*/
   Temp_Array[NUMBER_OF_SAMPLES_FOR_SMA-1] = *temperature;
+  printf("temperature=%f\n",Temp_Array[NUMBER_OF_SAMPLES_FOR_SMA-1]);
   SOC_Array[NUMBER_OF_SAMPLES_FOR_SMA-1] = *SOC;
+  printf("SOC=%f\n",SOC_Array[NUMBER_OF_SAMPLES_FOR_SMA-1]);
   
     
   return;
@@ -60,13 +62,10 @@ void FindSMA ()
     for (int SMALoop = 0; SMALoop < NUMBER_OF_SAMPLES_FOR_SMA; SMALoop++)
     {
       Temp_Sum +=Temp_Array[SMALoop];
-      printf("Temp_Sum=%f\n",Temp_Sum);
       SOC_Sum +=SOC_Array[SMALoop];
-      printf("SOC_Sum=%f\n",SOC_Sum);
     }
   
   SMA_Temp = Temp_Sum/NUMBER_OF_SAMPLES_FOR_SMA;
-  
   SMA_SOC = SOC_Sum/NUMBER_OF_SAMPLES_FOR_SMA;
  
 }
