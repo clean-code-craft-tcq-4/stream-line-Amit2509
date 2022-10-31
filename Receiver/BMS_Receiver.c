@@ -86,8 +86,8 @@ int PrintMinMaxSMA()
 void ReadConsolePrintMinMaxSMA()
 {
   float temperature, SOC, ChargeRate;
-  char title[30];
-  fgets(title,30,stdin);
+  char title[50];
+  fgets(title,50,stdin);
   puts(title);
   for (int i=0; i<50; i++)
   {
