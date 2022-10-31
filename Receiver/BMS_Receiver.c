@@ -25,7 +25,6 @@ void ReadParameters(float* SOC,float* temperature)
   {
     Temp_Array[i] = Temp_Array[i+1];
     SOC_Array[i] = SOC_Array[i+1];
-    ChargeRate_Array[i] = ChargeRate_Array[i+1];
   }
   
   /*Inserting the latest data into the last element of array*/
