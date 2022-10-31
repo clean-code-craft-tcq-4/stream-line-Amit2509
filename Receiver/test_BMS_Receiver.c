@@ -3,20 +3,10 @@
 #include "BMS_Receiver.h"
 
 
-
-
-
 int main()
 {
   
-  ReadConsolePrintMinMaxSMA(); 
-  
-  
- // testFindSMA();
-  
- // testPrintMinMaxSMA();
-  
- // ReadConsolePrintMinMaxSMA();
+  ReadConsolePrintMinMaxSMA();
   
   return 0;
   
