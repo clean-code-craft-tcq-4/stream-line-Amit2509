@@ -15,15 +15,15 @@ float SMA_ChargeRate = 0;
 float ChargeRate_Array[NUMBER_OF_SAMPLES_FOR_SMA] = {0};
 
 
-int ReadParameters(float* temperature, float* SOC)
+int ReadConsole(float* temperature, float* SOC)
 {
-  char dummy;
-  return scanf("%f%c%f", temperature, &dummy, SOC);
+  char ReadDummy_Ch;
+  return scanf("%f%c%f", temperature, &ReadDummy_Ch, SOC);
 }
 
-void ReadFromConsoleInput(float* temperature, float* SOC)
+void ReadParameters(float* SOC,float* temperature)
 {
-  ReadParameters(temperature, SOC);
+  ReadConsole(temperature, SOC);
   
    for(int i = 0; i<NUMBER_OF_SAMPLES_FOR_SMA-1; i++)
   {
