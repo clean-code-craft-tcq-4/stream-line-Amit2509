@@ -86,7 +86,7 @@ void ReadConsolePrintMinMaxSMA()
 
   for (int NoofParms=0; NoofParms<50; NoofParms++)
   {
-    ReadFromConsoleInput(&SOC,&temperature, );
+    ReadFromConsoleInput(&SOC,&temperature );
     FindMinAndMax(temperature, &Min_Temp, &Max_Temp);
     FindMinAndMax(SOC, &Min_SOC, &Max_SOC);
     FindSMA();
