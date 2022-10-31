@@ -20,7 +20,7 @@ int ReadConsole(float* temperature, float* SOC)
 void ReadParameters(float* SOC,float* temperature)
 {
   ReadConsole(temperature, SOC);
-  printf(temperature1=%f,SOC1=%f\n,temperature,SOC);
+  printf("temperature1=%f,SOC1=%f\n",temperature,SOC);
   /*Shifting the elements in the array for Moving Average calculation*/
    for(int prmsloop = 0; prmsloop<NUMBER_OF_SAMPLES_FOR_SMA-1; prmsloop++)
   {
